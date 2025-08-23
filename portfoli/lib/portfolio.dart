@@ -501,7 +501,7 @@ class _PortfolioState extends State<Portfolio> {
                                         onTap: () {
                                           launchUrl(
                                             Uri.parse(
-                                              "https://drive.google.com/file/d/1-LiZyBYKJ8HbiHSMOziMC-fgbjq_TW_o/view",
+                                              "https://drive.google.com/file/d/1O7wK8Wtusrz_omMBTWskT_UQD3Dc4mBz/view",
                                             ),
                                           );
                                         },
@@ -688,7 +688,7 @@ class _PortfolioState extends State<Portfolio> {
                                         onTap: () {
                                           launchUrl(
                                             Uri.parse(
-                                              "https://drive.google.com/file/d/1-LiZyBYKJ8HbiHSMOziMC-fgbjq_TW_o/view",
+                                              "https://drive.google.com/file/d/1O7wK8Wtusrz_omMBTWskT_UQD3Dc4mBz/view",
                                             ),
                                           );
                                         },
@@ -2836,7 +2836,7 @@ class _PortfolioState extends State<Portfolio> {
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text("Fiza's Portfolio",style: TextStyle(color:  Color(0xFFFAAD1A),fontFamily: "font",fontSize: 20,fontWeight: FontWeight.bold),),
-                                            Text("Thank you for visiting my portfolio!I truly appreciate your time and interest in my work.If you’d like to collaborate, share feedback, or discuss an opportunity, feel free to reach out — I’d love to connect with you!",style: TextStyle(fontSize: 20,fontFamily: "font1",color: Colors.white,fontWeight: FontWeight.bold),),
+                                            Text("Thank you for visiting my portfolio!I truly appreciate your time and interest in my work.If you’d like to collaborate, share feedback, or discuss an opportunity, feel free to reach out — I’d love to connect with you!",style: TextStyle(fontSize: 14,fontFamily: "font1",color: Colors.white,fontWeight: FontWeight.bold),),
                                           ],
                                         ))
                                     ],
