@@ -501,7 +501,7 @@ class _PortfolioState extends State<Portfolio> {
                                         onTap: () {
                                           launchUrl(
                                             Uri.parse(
-                                              "https://drive.google.com/file/d/1O7wK8Wtusrz_omMBTWskT_UQD3Dc4mBz/view",
+                                              "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto",
                                             ),
                                           );
                                         },
@@ -907,10 +907,9 @@ class _PortfolioState extends State<Portfolio> {
                                       children: [
                                         Text("Phone Number: ",style: TextStyle(fontSize: 16,color:  Color(0xFFFAAD1A),fontWeight: FontWeight.bold)),
                                         Text("+92 305-433-4454",style: TextStyle(fontSize: 16)),
-                                        
                                       ],
-                                    )
-                                        
+                                    ),
+                                        SizedBox(height: size.height*0.05),                                        
                                    ],
                                   ),
                                 ),
@@ -1012,7 +1011,9 @@ class _PortfolioState extends State<Portfolio> {
                             ],
                                                      ),
                          ),
-                                     SizedBox(height: 10,),
+                                    //  SizedBox(height: 10,),
+                                        SizedBox(height: size.height*0.05),                                        
+
                          
                          
                         ],
@@ -1032,15 +1033,15 @@ class _PortfolioState extends State<Portfolio> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(Icons.laptop,size: 60,),
-                                Text(" Skills &",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFF344C36)),),
-                                Text(" Course",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFFFAAD1A)),),
+                                Text(" Skills &",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFF344C36),fontFamily: "font"),),
+                                Text(" Course",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFFFAAD1A),fontFamily: "font"),),
         
                               ],
                             ),
                           ),
                         ),
                         Container(
-                          child: size.width>=768?Row(
+                          child: size.width>=900?Row(
                             children: [
                                   
                                Padding(
@@ -1251,8 +1252,7 @@ class _PortfolioState extends State<Portfolio> {
                                           ],
                                         ),
                                       ),
-                                      Row(),
-                                      Row(),
+                                
                                     ],
                                   ),
                                  ),
@@ -1268,6 +1268,9 @@ class _PortfolioState extends State<Portfolio> {
                                   child: Image.asset("assets/image1.png",fit: BoxFit.cover,),
                                  ),
                                ),
+ 
+                                   SizedBox(height:size.height*0.05),
+
                             ],
                           ):Row(
                             children: [
@@ -1490,6 +1493,8 @@ class _PortfolioState extends State<Portfolio> {
                             ],
                           ),
                         ),
+                                   SizedBox(height:size.height*0.05),
+
                       ],
                     ),
                     Container(
@@ -1505,8 +1510,8 @@ class _PortfolioState extends State<Portfolio> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                    Icon(Icons.school_sharp,size: 60,color: Color(0xFF344C36)),
-                              Text(" My ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color: Color(0xFF344C36)),),
-                              Text("Education ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFFFAAD1A)),),
+                              Text(" My ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color: Color(0xFF344C36),fontFamily: "font"),),
+                              Text("Education ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color:  Color(0xFFFAAD1A),fontFamily: "font"),)
                               
                                 ],
                               ),
@@ -1527,15 +1532,19 @@ class _PortfolioState extends State<Portfolio> {
                                     width: size.width>=375?352:330,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
-                                      border: Border.all(color: Color(0xFF344C36))
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                            border: Border.all(color: Color(0xFF344C36) )
+
                                     ),
                                     child: Column(
                                       children: [
                                         Container(
                                           height: 250,
                                           width: 350,
-                                          color: Colors.white,
-                                          child: Image.asset("assets/uni.jpeg",fit: BoxFit.cover,),
+                                           decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                          image: DecorationImage(image: AssetImage("assets/uni.jpeg"),fit: BoxFit.cover,)
+                                          ),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(left:10.0),
@@ -1566,20 +1575,25 @@ class _PortfolioState extends State<Portfolio> {
                                     ),
                                   ),
                                    Container(
-                                    height:  size.width>=375?380:350,
+                                    height:  size.width>=390?380:400,
                                     width: size.width>=375?330:330 ,
                                     decoration: BoxDecoration(
-                                      color: Color(0xFF344C36),
+                                      color:  Color(0xFF344C36),
+                                            border: Border.all(color: Color(0xFF344C36) ),
+                                            
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                     
+                                          
                                     ),
                                     child: Column(
                                       children: [
                                         Container(
                                           height: 250,
                                           width: 350,
-                                          color: Color(0xFF344C36),
-                                    
-                                          child: Image.asset("assets/college.png",fit: BoxFit.cover,),
-                                    
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                          image: DecorationImage(image: AssetImage("assets/college.png"),fit: BoxFit.cover,)
+                                          ),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(left:10.0),
@@ -1623,17 +1637,19 @@ class _PortfolioState extends State<Portfolio> {
                                     width:  size.width>=375?350:330,
                                     decoration: BoxDecoration(
                                       color:  Color(0xFF344C36),
+                                            border: Border.all(color: Color(0xFF344C36) ),
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
                                       
-                                      borderRadius: BorderRadius.all(Radius.circular(10))
                                     ),
                                     child: Column(
                                       children: [
                                         Container(
                                           height: 250,
                                           width: 350,
-                                          color:  Color(0xFF8C1007),
-                                          
-                                          child: Image.asset("assets/school.png",fit: BoxFit.cover,),
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                                          image: DecorationImage(image: AssetImage("assets/school.png"),fit: BoxFit.cover,)
+                                          ),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(left:10.0),
@@ -1658,7 +1674,7 @@ class _PortfolioState extends State<Portfolio> {
                                           Align(
                                             alignment: Alignment.topLeft,
                                     
-                                            child: Text("Govt.Girls High School",style: TextStyle(fontWeight: FontWeight.bold,fontSize: size.width>=375? 20:14, color: Color(0xFFFAAD1A)    ),)),
+                                            child: Text("Govt.Girls High School, Lahore",style: TextStyle(fontWeight: FontWeight.bold,fontSize: size.width>=375? 20:14, color: Color(0xFFFAAD1A)    ),)),
                                               SizedBox(height:size.width>=375? 10:7,),
                                             ],
                                           ),
@@ -1671,6 +1687,7 @@ class _PortfolioState extends State<Portfolio> {
                               ),
                             ),
                           ),
+                          SizedBox(height: size.height*0.05,),
                         ],
                       ),
                     ),
@@ -1705,10 +1722,8 @@ class _PortfolioState extends State<Portfolio> {
                                   onTap: (){
                                   
                                   },
-                                  // hoverColor: Colors.white,
-                                  splashColor: Colors.amber,
                                   child: Container(
-                                    height: 400,
+                                    height: size.width<=370?400:450,
                                     width: 420,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1754,12 +1769,10 @@ class _PortfolioState extends State<Portfolio> {
                                   ),
                                 ),
                                  InkWell(
-                                  onTap: (){},
-                                  splashColor: Colors.amber,
-                                  
+                                  onTap: (){},             
                                    child: Container(
                                     
-                                    height: size.width>=400?400:450,
+                                    height: size.width<=370?400:450,
                                     width: 420,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1800,10 +1813,8 @@ class _PortfolioState extends State<Portfolio> {
                                                            ),
                                  ), InkWell(
                                   onTap: (){},
-                                  splashColor: Colors.amber,
-                                  
                                   child: Container(
-                                    height: 410,
+                                    height: size.width<=370?400:450,
                                     width: 400,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1844,10 +1855,9 @@ class _PortfolioState extends State<Portfolio> {
                                 ),
                                 InkWell(
                                   onTap: (){},
-                                  splashColor: Colors.amber,
-                                  
+                                
                                   child: Container(
-                                    height: 410,
+                                    height: size.width<=370?400:450,
                                     width: 400,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1920,6 +1930,7 @@ class _PortfolioState extends State<Portfolio> {
                                 // height: 250,
                                 width: 810,
                                 decoration: BoxDecoration(
+                                   borderRadius: BorderRadius.all(Radius.circular(20)),
                                   
                                    color: Colors.white,
                                    border: Border.all(color:  Color(0xFF344C36)),
@@ -1932,17 +1943,15 @@ class _PortfolioState extends State<Portfolio> {
                                       
                                     )
                                   ],
-                                   borderRadius: BorderRadius.all(Radius.circular(20))
+                                  //  borderRadius: BorderRadius.all(Radius.circular(20)),
                                 ),
                                 // color: Colors.amber,
                                       
-                               child: size.width>=820?Row(
+                               child: size.width>=900?Row(
                                 children: [
                                   Container(
                                      height: 250,
-                                width: 300,
-                                      
-                                // color: Colors.white,
+                                     width: 300,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -1964,9 +1973,7 @@ class _PortfolioState extends State<Portfolio> {
                                   
                                   Container(
                                      height: 250,
-                                width: 500,
-                                      
-                                // color: Colors.white,
+                                     width: 500,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -1994,17 +2001,19 @@ class _PortfolioState extends State<Portfolio> {
 
                                   // SizedBox(height: size.height*0.05,)
                                ):Container(
+                                // color: Colors.white,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(20)),
                                 color: Colors.white,
+
+                                ),
                                  child: Column(
                                   children: [
                                      Padding(
                                        padding: EdgeInsets.only(top:8.0),
                                        child: CircleAvatar(
                                           radius:60,
-                                          backgroundColor:  Color(0xFF344C36),
-                                          // foregroundColor:  Color(0xFF344C36),
-                                          // child: Image.asset("assets/devsinn.png",fit: BoxFit.contain),
-                                         backgroundImage: AssetImage("assets/devsinn.png"),
+                                          backgroundColor:  Color(0xFF344C36),                                   backgroundImage: AssetImage("assets/devsinn.png"),
                                          
                                         ),
                                      ),
@@ -2072,7 +2081,7 @@ class _PortfolioState extends State<Portfolio> {
         
                           Padding(
                             padding: EdgeInsets.only(top:size.height*0.05),
-                            child: size.width>=768?Container(
+                            child: size.width>=900?Container(
                               height:  size.height*0.80,
                               width: double.infinity,
                              
@@ -2087,10 +2096,11 @@ class _PortfolioState extends State<Portfolio> {
                                       decoration: BoxDecoration(
                                         color:  Color(0xFF344C36),
                                         border: Border.all( 
-                                        color:  Color(0xFF344C36)
+                                        color:  Color(0xFF344C36),
                                       ),
+                                      borderRadius:BorderRadius.only(topLeft: Radius.circular(20),bottomLeft: Radius.circular(20)),
+                                      image: DecorationImage(image: AssetImage("assets/login.jpg"),fit: BoxFit.cover,)
                                       ),
-                                      child: Image.asset("assets/login.jpg",fit: BoxFit.cover,),
                                     ),
                                   ),
                                   Padding(
@@ -2103,6 +2113,8 @@ class _PortfolioState extends State<Portfolio> {
                                          border: Border.all( 
                                         color:  Color(0xFF344C36)
                                       ),
+                                      borderRadius:BorderRadius.only(topRight: Radius.circular(20),bottomRight: Radius.circular(20)),
+
                                       ),
                                       // color: Color(0xFF344C36),
                                       child: Padding(
@@ -2115,19 +2127,28 @@ class _PortfolioState extends State<Portfolio> {
                                               width: 400,
                                               child: TextField(
                                                 decoration: InputDecoration(
-                                                  prefixIcon: Icon(Icons.person),
+                                                   border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10)
+                                                ),
+                                                  prefixIcon: Icon(Icons.person,color:  Color(0xFFFAAD1A),),
                                                   hintText: " Name",
                                                   filled: true,
                                                   fillColor: Colors.white,
                                                 enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                   borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
-                                                
+                                               
                                                 ),
+                                               
                                                 focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  
                                                    borderSide: BorderSide(
-                                                    color: Colors.black
+                                                    color: Colors.black,
+                        
+
                                                   ),
                                                 )
                                                 ),
@@ -2141,17 +2162,24 @@ class _PortfolioState extends State<Portfolio> {
                                                 
                                               child: TextField(
                                                 decoration: InputDecoration(
-                                                  prefixIcon: Icon(Icons.email),
+                                                  border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10)
+                                                    
+                                                  ),
+                                                  prefixIcon: Icon(Icons.email,color:  Color(0xFFFAAD1A),),
                                                   hintText: " Email",
                                                    filled: true,
                                                   fillColor: Colors.white,
                                                    enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+
                                                   borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
                                                 
                                                 ),
                                                 focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                    borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
@@ -2166,17 +2194,22 @@ class _PortfolioState extends State<Portfolio> {
                                                 
                                               child: TextField(
                                                 decoration: InputDecoration(
-                                                  prefixIcon: Icon(Icons.call),
+                                                  border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  ),
+                                                  prefixIcon: Icon(Icons.call,color:  Color(0xFFFAAD1A),),
                                                   hintText: " Phone",
                                                    filled: true,
                                                   fillColor: Colors.white,
                                                    enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                   borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
                                                 
                                                 ),
                                                 focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                    borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
@@ -2192,17 +2225,22 @@ class _PortfolioState extends State<Portfolio> {
                                               child: TextField(
                                                 maxLines: 5,
                                                 decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                  ),
                                                   // prefixIcon: Icon(Icons.message),
                                                   hintText: " Message",
                                                    filled: true,
                                                   fillColor: Colors.white,
                                                    enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                     borderSide: BorderSide(
                                                       color: Colors.black
                                                     ),
                                                 
                                                   ),
                                                   focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                      borderSide: BorderSide(
                                                       color: Colors.black
                                                     ),
@@ -2216,13 +2254,13 @@ class _PortfolioState extends State<Portfolio> {
                                               height: 35,
                                               width: 100,
                                               decoration: BoxDecoration(
-                                                color: Colors.white,
+                                                  color:  Color(0xFFFAAD1A), 
                                                 borderRadius: BorderRadius.all(Radius.circular(20)),
                                                 border: Border.all(
-                                                  color: Colors.black
+                                                  color:  Color(0xFFFAAD1A), 
                                                 )
                                               ),
-                                              child: Center(child: Text("Submit")),
+                                              child: Center(child: Text("Submit",style: TextStyle(color: Colors.white, ),)),
                                                 
                                             ),
                                           ],
@@ -2259,17 +2297,22 @@ class _PortfolioState extends State<Portfolio> {
                                             width: 400,
                                             child: TextField(
                                               decoration: InputDecoration(
+                                                border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                ),
                                                 prefixIcon: Icon(Icons.person,color:  Color(0xFFFAAD1A),),
                                                 hintText: " Name",
                                                 filled: true,
                                                 fillColor: Colors.white,
                                               enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                 borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
                                               
                                               ),
                                               focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                  borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
@@ -2285,17 +2328,22 @@ class _PortfolioState extends State<Portfolio> {
                                               
                                             child: TextField(
                                               decoration: InputDecoration(
+                                                border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                ),
                                                 prefixIcon: Icon(Icons.email,color:  Color(0xFFFAAD1A)),
                                                 hintText: " Email",
                                                  filled: true,
                                                 fillColor: Colors.white,
                                                  enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                 borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
                                               
                                               ),
                                               focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                  borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
@@ -2310,17 +2358,22 @@ class _PortfolioState extends State<Portfolio> {
                                               
                                             child: TextField(
                                               decoration: InputDecoration(
+                                                border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                ),
                                                 prefixIcon: Icon(Icons.call,color:  Color(0xFFFAAD1A)),
                                                 hintText: " Phone",
                                                  filled: true,
                                                 fillColor: Colors.white,
                                                  enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                 borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
                                               
                                               ),
                                               focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                  borderSide: BorderSide(
                                                   color: Colors.black
                                                 ),
@@ -2337,16 +2390,21 @@ class _PortfolioState extends State<Portfolio> {
                                               maxLines: 5,
                                               decoration: InputDecoration(
                                                 // prefixIcon: Icon(Icons.message),
+                                                border: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
+                                                ),
                                                 hintText: " Message",
                                                  filled: true,
                                                 fillColor: Colors.white,
                                                  enabledBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                   borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
                                               
                                                 ),
                                                 focusedBorder: OutlineInputBorder(
+                                                  borderRadius: BorderRadius.circular(10),
                                                    borderSide: BorderSide(
                                                     color: Colors.black
                                                   ),
@@ -2387,10 +2445,10 @@ class _PortfolioState extends State<Portfolio> {
                     SizedBox(height: size.height*0.05,),
                     Container(
                       child: size.width>=768?Container(
-                        height: size.height*0.50,
+                        // height: size.height*0.50,
                         color:  Color(0xFF344C36),
                         child: Padding(
-                          padding: EdgeInsets.only(top:20),
+                          padding: EdgeInsets.only(top:20,bottom: 20),
                           child: Row(
                             children: [
                                 Padding(
@@ -2427,12 +2485,7 @@ class _PortfolioState extends State<Portfolio> {
                                   ),
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                            width:
-                                    size.width >= 912
-                                        ? size.width * 0.02
-                                        : size.width * 0,
-                                                          ),
+                                                         
                                                           TextButton(
                                                             onPressed: () {
                                   Scrollable.ensureVisible(
@@ -2450,13 +2503,7 @@ class _PortfolioState extends State<Portfolio> {
                                   ),
                                                             ),
                                                           ),
-                                                          // SizedBox(width: 40),
-                                                          SizedBox(
-                                                            width:
-                                    
-                                        size.width * 0,
-                                                          ),
-                                  
+                                                         
                                                           TextButton(
                                                             onPressed: () {
                                   Scrollable.ensureVisible(
@@ -2474,13 +2521,7 @@ class _PortfolioState extends State<Portfolio> {
                                   ),
                                                             ),
                                                           ),
-                                                          // SizedBox(width: 40),
-                                                          // SizedBox(width: size.width*0.02),
-                                                          SizedBox(
-                                                            width:
-                                    size.width * 0,
-                                                          ),
-                                  
+                                                         
                                                           TextButton(
                                                             onPressed: () {
                                   Scrollable.ensureVisible(
@@ -2552,18 +2593,17 @@ class _PortfolioState extends State<Portfolio> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsets.only(right:size.width*0.05),
+                                    padding: EdgeInsets.only(right:size.width*0.05,left:size.width*0.05),
                                     child: Column(
                                       children: [
                                         Container(
-                                          // height: 500,
-                                          width: 350,
-                                          
+                                         width: 350,
                                           child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
+                                      
                                               Text("Fiza's Portfolio",style: TextStyle(color:  Color(0xFFFAAD1A),fontFamily: "font",fontSize: 20),),
-                                              Text("Thank you for visiting my portfolio!I truly appreciate your time and interest in my work.If you’d like to collaborate, share feedback, or discuss an opportunity, feel free to reach out — I’d love to connect with you!",style: TextStyle(fontSize: 20,color:  Colors.white,fontFamily: "font1"),),
+                                              Text("Thank you for visiting my portfolio!I truly appreciate your time and interest in my work.If you’d like to collaborate, share feedback, or discuss an opportunity, feel free to reach out — I’d love to connect with you!",style: TextStyle(fontSize: size.width>=844?20:14,color:  Colors.white,fontFamily: "font1"),),
                                             ],
                                           ))
                                       ],
@@ -2664,168 +2704,157 @@ class _PortfolioState extends State<Portfolio> {
                           ),
                         ),
                       ):Container(
-                        height: size.height*0.99,
+                        // height: size.height*0.99,
                         color:  Color(0xFF344C36),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                 TextButton(
-                                  onPressed: (){
-                                    
-                                  },
-                                   child: Text("Quick Links",
-                                                                   style: TextStyle(
-                                                                     fontWeight: FontWeight.bold,
-                                                                     color:  Color(0xFFFAAD1A),
-                                                                     fontFamily: "font",fontSize: 20,
-                                                                   ),),
-                                 ),
-                                   TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                home.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Home",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20,
-                              ),
-                                                        ),
-                                                      ),
-                                                      SizedBox(
-                                                        width:
-                                size.width >= 912
-                                    ? size.width * 0.02
-                                    : size.width * 0,
-                                                      ),
-                                                      TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                about.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "About",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                      ),
-                                                      // SizedBox(width: 40),
-                                                      SizedBox(
-                                                        width:
-                                
-                                    size.width * 0,
-                                                      ),
-                              
-                                                      TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                skills.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Skills",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                      ),
-                                                      // SizedBox(width: 40),
-                                                      // SizedBox(width: size.width*0.02),
-                                                      SizedBox(
-                                                        width:
-                                size.width * 0,
-                                                      ),
-                              
-                                                      TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                education.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Education",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                ),
-                                                       TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                education.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Work",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                      ), TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                education.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Experience",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                      ), TextButton(
-                                                        onPressed: () {
-                              Scrollable.ensureVisible(
-                                education.currentContext!,
-                                duration: Duration(milliseconds: 600),
-                                curve: Curves.easeInOut,
-                              );
-                                                        },
-                                                        child: Text(
-                              "Contact",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontFamily: "font1",fontSize: 20
-                              ),
-                                                        ),
-                                                      ),
-                                ],
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.only(left:size.width*0.05,right:size.width*0.02),
+                        child: Padding(
+                          padding:EdgeInsets.only(top:size.height*0.05,left:size.width*0.05,right:size.width*0.05 ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                                Padding(
+                                  padding:EdgeInsets.only(bottom:size.height*0.02),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                     TextButton(
+                                      onPressed: (){
+                                        
+                                      },
+                                       child: Text("Quick Links",
+                                                                       style: TextStyle(
+                                                                         fontWeight: FontWeight.bold,
+                                                                         color:  Color(0xFFFAAD1A),
+                                                                         fontFamily: "font",fontSize: 20,
+                                                                       ),),
+                                     ),
+                                       TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    home.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Home",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20,
+                                  ),
+                                                            ),
+                                                          ),
+                                                         
+                                                          TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    about.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "About",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                          ),
+                                                        
+                                                         
+                                  
+                                                          TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    skills.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Skills",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                          ),
+                                                        
+                                                          TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    education.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Education",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                    ),
+                                                           TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    education.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Work",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                          ), TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    education.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Experience",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                          ), TextButton(
+                                                            onPressed: () {
+                                  Scrollable.ensureVisible(
+                                    education.currentContext!,
+                                    duration: Duration(milliseconds: 600),
+                                    curve: Curves.easeInOut,
+                                  );
+                                                            },
+                                                            child: Text(
+                                  "Contact",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontFamily: "font1",fontSize: 20
+                                  ),
+                                                            ),
+                                                          ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left:size.width*0.03,right:size.width*0.05,bottom:size.height*0.02 ),
                                   child: Column(
                                     children: [
                                       Container(
@@ -2835,110 +2864,111 @@ class _PortfolioState extends State<Portfolio> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text("Fiza's Portfolio",style: TextStyle(color:  Color(0xFFFAAD1A),fontFamily: "font",fontSize: 20,fontWeight: FontWeight.bold),),
+                                            Text("Fiza's Portfolio",style: TextStyle(color:  Color(0xFFFAAD1A),fontFamily: "font",fontSize: 30,fontWeight: FontWeight.bold),),
                                             Text("Thank you for visiting my portfolio!I truly appreciate your time and interest in my work.If you’d like to collaborate, share feedback, or discuss an opportunity, feel free to reach out — I’d love to connect with you!",style: TextStyle(fontSize: 14,fontFamily: "font1",color: Colors.white,fontWeight: FontWeight.bold),),
                                           ],
                                         ))
                                     ],
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding:  EdgeInsets.only(left:size.width*0.05,right:size.width*0.05),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                      
-                                  
-                                  children: [
-                                    Text("Conatct Info",style: TextStyle(fontSize: 20,fontFamily: "font",fontWeight: FontWeight.bold,color: Color(0xFFFAAD1A) )),
-                                    Row(
-                                      children: [
-                                        Icon(Icons.call,color: Color(0xFFFAAD1A)),
-                                        Text(" +92 305-433-4454",style: TextStyle(fontSize: 20,fontFamily: "font1",fontWeight: FontWeight.bold,color:  Colors.white))
-                                      ],
-                                    ),
-                                    Row(
-                                       children: [
-                                        Icon(Icons.mail,color: Color(0xFFFAAD1A)),
-                                        Text(" fiza28320@gmail.com",style: TextStyle(fontSize: 20,fontFamily: "font1",fontWeight: FontWeight.bold,color: Colors.white))
-                                      ],
-                                    ),
-                                    Row(
-                                       children: [
-                                        Icon(Icons.location_on,color: Color(0xFFFAAD1A)),
-                                        Text(" Lahore, Pakistan-540000",style: TextStyle(fontSize: 20,fontFamily: "font1",fontWeight: FontWeight.bold,color: Colors.white)),
-                    //  SizedBox(height: size.height*0.010,),
-
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(top:8.0),
-                                      child: Row(
+                                Padding(
+                                  padding:  EdgeInsets.only(left:size.width*0.03,right:size.width*0.05,bottom: size.height*0.02),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                
+                                    
+                                    children: [
+                                      Text("Conatct Info",style: TextStyle(fontSize: 20,fontFamily: "font",fontWeight: FontWeight.bold,color: Color(0xFFFAAD1A) )),
+                                      Row(
                                         children: [
-                                          
-                                         InkWell(
-                                                onTap: () {
-                                                  launchUrl(
-                                                    Uri.parse(
-                                                      "https://github.com/fizanoor2005",
-                                                    ),
-                                                  );
-                                                },
-                                                child: Container(
-                                                  height: 50,
-                                                  width: 50,
-                                                  decoration: BoxDecoration(
-                                                    // color: Colors.blue,
-                                                    borderRadius:
-                                                        BorderRadius.circular(50),
-                                                    // color: Colors.blue,
-                                                    border: Border.all(
-                                                      color:  Color(0xFFFAAD1A),
-                                                    ),
-                                                  ),
-                                                              
-                                                  child: Image.asset(
-                                                    "assets/github.png",
-                                                  ),
-                                                ),
-                                              ),
-                                              SizedBox(width: 20),
-                                              InkWell(
-                                                onTap: () {
-                                                  launchUrl(
-                                                    Uri.parse(
-                                                      "https://www.linkedin.com/in/fizanoor/",
-                                                    ),
-                                                  );
-                                                },
-                                                              
-                                                child: Container(
-                                                  height: 50,
-                                                  width: 50,
-                                                  decoration: BoxDecoration(
-                                                    // color: Colors.blue,
-                                                    borderRadius:
-                                                        BorderRadius.circular(50),
-                                                    border: Border.all(
-                                                      color:  Color(0xFFFAAD1A),
-                                                    ),
-                                                  ),
-                                                  child: Image.asset(
-                                                    "assets/linkedn1.png",
-                                                  ),
-                                                ),
-                                              ),
+                                          Icon(Icons.call,color: Color(0xFFFAAD1A),size: 20,),
+                                          Text(" +92 305-433-4454",style: TextStyle(fontSize: 14,fontFamily: "font1",fontWeight: FontWeight.bold,color:  Colors.white))
                                         ],
                                       ),
-                                    ),
-                                  ],
+                                      Row(
+                                         children: [
+                                          Icon(Icons.mail,color: Color(0xFFFAAD1A),size: 20,),
+                                          Text(" fiza28320@gmail.com",style: TextStyle(fontSize: 14,fontFamily: "font1",fontWeight: FontWeight.bold,color: Colors.white))
+                                        ],
+                                      ),
+                                      Row(
+                                        
+                                         children: [
+                                          Icon(Icons.location_on,color: Color(0xFFFAAD1A),size: 20,),
+                                          Text(" Lahore, Pakistan-540000",style: TextStyle(fontSize: 14,fontFamily: "font1",fontWeight: FontWeight.bold,color: Colors.white)),
+                                              //  SizedBox(height: size.height*0.010,),
+                          
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top:8.0),
+                                        child: Row(
+                                          children: [
+                                            
+                                           InkWell(
+                                                  onTap: () {
+                                                    launchUrl(
+                                                      Uri.parse(
+                                                        "https://github.com/fizanoor2005",
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    height: 50,
+                                                    width: 50,
+                                                    decoration: BoxDecoration(
+                                                      // color: Colors.blue,
+                                                      borderRadius:
+                                                          BorderRadius.circular(50),
+                                                      // color: Colors.blue,
+                                                      border: Border.all(
+                                                        color:  Color(0xFFFAAD1A),
+                                                      ),
+                                                    ),
+                                                                
+                                                    child: Image.asset(
+                                                      "assets/github.png",
+                                                    ),
+                                                  ),
+                                                ),
+                                                SizedBox(width: 20),
+                                                InkWell(
+                                                  onTap: () {
+                                                    launchUrl(
+                                                      Uri.parse(
+                                                        "https://www.linkedin.com/in/fizanoor/",
+                                                      ),
+                                                    );
+                                                  },
+                                                                
+                                                  child: Container(
+                                                    height: 50,
+                                                    width: 50,
+                                                    decoration: BoxDecoration(
+                                                      // color: Colors.blue,
+                                                      borderRadius:
+                                                          BorderRadius.circular(50),
+                                                      border: Border.all(
+                                                        color:  Color(0xFFFAAD1A),
+                                                      ),
+                                                    ),
+                                                    child: Image.asset(
+                                                      "assets/linkedn1.png",
+                                                    ),
+                                                  ),
+                                                ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                                //  Divider(thickness: 2,color: Colors.black,),
-                               SizedBox(height: size.height*0.02,),
-
-                          ],
+                                  //  Divider(thickness: 2,color: Colors.black,),
+                                 SizedBox(height: size.height*0.02,),
+                          
+                            ],
+                          ),
                         ),
                       )
                     ),
@@ -2956,9 +2986,14 @@ class _PortfolioState extends State<Portfolio> {
                         children: [
                           InkWell(
                             onTap: (){
-                              launchUrl(Uri.parse("https://www.linkedin.com/in/muhammad-kabeer"));
+                              launchUrl(Uri.parse("https://www.linkedin.com/in/fizanoor/"));
                             },
-                            child: Text("Designed By Muhammad Kabeer",style: TextStyle(color:  Color(0xFFFAAD1A),fontSize:16,fontFamily: "font" ),)),
+                            child: Row(
+                              children: [
+                                Text("Designed By Fiza Noor ",style: TextStyle(color:  Color(0xFFFAAD1A),fontSize:16,fontFamily: "font" ),),
+                                Icon(Icons.favorite,color: Colors.red,),
+                              ],
+                            )),
                               //  SizedBox(height: size.height*0.05,),
                         ],
                       ),
