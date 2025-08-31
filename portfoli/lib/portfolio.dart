@@ -501,7 +501,7 @@ class _PortfolioState extends State<Portfolio> {
                                         onTap: () {
                                           launchUrl(
                                             Uri.parse(
-                                              "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto",
+                                              "https://drive.google.com/file/d/1s7qm8xsnB2oVNFLlGNcNFZ669fEobLZ2/view?usp=drive_link",
                                             ),
                                           );
                                         },
@@ -688,7 +688,7 @@ class _PortfolioState extends State<Portfolio> {
                                         onTap: () {
                                           launchUrl(
                                             Uri.parse(
-                                              "https://drive.google.com/file/d/1O7wK8Wtusrz_omMBTWskT_UQD3Dc4mBz/view",
+                                              "https://drive.google.com/file/d/1s7qm8xsnB2oVNFLlGNcNFZ669fEobLZ2/view?usp=drive_link",
                                             ),
                                           );
                                         },
@@ -856,7 +856,7 @@ class _PortfolioState extends State<Portfolio> {
                             children: [
         
                               Padding(
-                                padding: EdgeInsets.only(left:40,right: 40),
+                                padding: EdgeInsets.only(left:40,right: 40,bottom: 40),
                                 child: Container(
                                   height: size.height * 0.70,
                                   width: size.width * 0.30,
@@ -1723,7 +1723,7 @@ class _PortfolioState extends State<Portfolio> {
                                   
                                   },
                                   child: Container(
-                                    height: size.width<=370?400:450,
+                                    height: size.width>=400?450:480,
                                     width: 420,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1772,7 +1772,7 @@ class _PortfolioState extends State<Portfolio> {
                                   onTap: (){},             
                                    child: Container(
                                     
-                                    height: size.width<=370?400:450,
+                                    height: size.width>=450?450:520,
                                     width: 420,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1814,7 +1814,7 @@ class _PortfolioState extends State<Portfolio> {
                                  ), InkWell(
                                   onTap: (){},
                                   child: Container(
-                                    height: size.width<=370?400:450,
+                                    height: size.width>=400?450:450,
                                     width: 400,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
@@ -1857,7 +1857,7 @@ class _PortfolioState extends State<Portfolio> {
                                   onTap: (){},
                                 
                                   child: Container(
-                                    height: size.width<=370?400:450,
+                                    height: size.width>=400?450:480,
                                     width: 400,
                                     decoration: BoxDecoration(
                                       color:   Color(0xFF344C36),
